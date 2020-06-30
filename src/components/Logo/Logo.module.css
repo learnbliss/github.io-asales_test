@@ -8,5 +8,6 @@
 .logo img {
     border-radius: 50%;
     box-shadow: 0 .5rem .5rem 0 rgba(0, 0, 0, .2);
-    width: 70px;
+    width: 60px;
+    height: 60px;
 }
