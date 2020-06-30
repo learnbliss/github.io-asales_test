@@ -1,0 +1,14 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/4;
+    grid-gap: .3rem;
+}
+
+.first {
+    color: var(--greyText);
+}
+
+.second {
+    text-transform: none;
+}

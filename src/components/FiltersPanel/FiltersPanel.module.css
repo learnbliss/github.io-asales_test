@@ -1,4 +1,5 @@
 .panel {
+    align-self: start;
     background-color: var(--white);
     width: min-content;
     border-radius: .5rem;

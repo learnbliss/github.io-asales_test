@@ -1,11 +1,13 @@
 @import '~normalize.css/normalize.css';
 
 :root {
+  --black: #4A4A4A;
   --white: #ffffff;
   --blue: #2B98F0;
   --grey: #9BBBCD;
   --lightBlue: #F1FCFF;
   --lightGrey: #DFE5EC;
+  --greyText: #A0B0B9;
 }
 
 body {
@@ -16,6 +18,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F3F7FA;
+  color: var(--black);
+  font-weight: 500;
 }
 
 code {

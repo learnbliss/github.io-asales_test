@@ -4,6 +4,7 @@
     cursor: pointer;
     user-select: none;
     padding: .7rem 1.5rem;
+    font-weight: normal;
 }
 
 .label:hover {
@@ -50,6 +51,6 @@
   height: 1rem;
   margin: 0 .5rem 0;
   border: solid var(--blue);
-  border-width: 0 1px 1px 0;
+  border-width: 0 2px 2px 0;
   transform: rotate( 45deg);
 }
