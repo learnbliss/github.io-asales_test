@@ -1,0 +1,13 @@
+.panel {
+    background-color: var(--white);
+    width: min-content;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, .2);
+    padding: 1rem 0;
+}
+
+.head {
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: .7rem 1.5rem 1rem 1.5rem;
+}

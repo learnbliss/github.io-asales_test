@@ -1,0 +1,14 @@
+.button {
+    width: 100%;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    border: 1px solid var(--lightGrey);
+    background-color: var(--white);
+    outline: none;
+}
+
+.selected {
+    color: var(--white);
+    background-color: var(--blue);
+    border: 0;
+}

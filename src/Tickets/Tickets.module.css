@@ -1,0 +1,18 @@
+.root {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1.5rem;
+}
+
+.board {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: 1.5rem;
+}
+
+.ticket {
+    display: grid;
+    grid-template-rows: min-content;
+    align-self: start;
+    grid-gap: 1.5rem;
+}

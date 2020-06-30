@@ -1,0 +1,6 @@
+.root {
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, .2);
+    padding: 1.5rem;
+}

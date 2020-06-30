@@ -1,0 +1,55 @@
+.label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: .7rem 1.5rem;
+}
+
+.label:hover {
+    background-color: var(--lightBlue);
+}
+
+.label input {
+    display: none;
+}
+
+.customInput {
+    display: inline-block;
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--grey);
+    margin-right: 1rem;
+    border-radius: .2rem;
+}
+
+.label input:checked ~ .customInput {
+    border: 1px solid var(--blue);
+}
+
+.customInput:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.label input:checked ~ .customInput:after {
+    display: block;
+}
+
+/*.label .customInput:after {*/
+/*    width: .65rem;*/
+/*    height: .65rem;*/
+/*    border-radius: 50%;*/
+/*    background-color: var(--blue);*/
+/*}*/
+
+.label .customInput:after {
+  width: .5rem;
+  height: 1rem;
+  margin: 0 .5rem 0;
+  border: solid var(--blue);
+  border-width: 0 1px 1px 0;
+  transform: rotate( 45deg);
+}
