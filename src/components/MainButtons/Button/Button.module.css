@@ -5,6 +5,8 @@
     border: 1px solid var(--lightGrey);
     background-color: var(--white);
     outline: none;
+    cursor: pointer;
+    user-select: none;
 }
 
 .selected {
