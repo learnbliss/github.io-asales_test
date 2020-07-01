@@ -13,8 +13,8 @@
     text-transform: uppercase;
 }
 
-.head > span {
-    padding: .5rem 0;
+.head span img {
+    height: 3.5rem;
 }
 
 .price {
