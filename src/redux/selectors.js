@@ -17,3 +17,14 @@ export const ticketsSelector = createSelector(
         }).slice(0, 5);
     }
 );
+
+export const transplantsSelectors = (state) => state.tickets.transplants;
+export const selectTransplantsSelector = (state) => state.tickets.selectTransplants;
+
+export const selectTransplantsBoolSelector = createSelector(
+    selectTransplantsSelector,
+    (_, {count}) => count,
+    (selectTransplants, count) => {
+        return !!selectTransplants.includes(count)
+    }
+);

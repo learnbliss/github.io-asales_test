@@ -1,4 +1,14 @@
-import {FAILURE, LOAD_TICKETS, REQUEST, SET_MAIN_FILTER, SUCCESS} from './constants';
+import {
+    DEL_OTHER_TRANSPLANTS,
+    DEL_TRANSPLANT,
+    FAILURE,
+    LOAD_TICKETS,
+    REQUEST,
+    SET_MAIN_FILTER,
+    SET_TRANSPLANTS,
+    SUCCESS
+} from './constants';
+import {selectTransplantsSelector} from './selectors';
 
 export const loadTickets = () => {
     return async (dispatch, getState) => {
@@ -23,3 +33,26 @@ export const setMainFilter = (filter) => ({
         filter
     },
 });
+
+export const setTransplants = (count) => {
+    return async (dispatch, getState) => {
+        const state = getState();
+        const transplants = selectTransplantsSelector(state);
+        if (transplants.includes(count)) {
+            dispatch({type: DEL_TRANSPLANT, payload: {count}})
+        }
+        else if (count === Infinity) {
+            dispatch({type: DEL_OTHER_TRANSPLANTS})
+        }
+        else {
+            dispatch({type: SET_TRANSPLANTS, payload: {count}})
+        }
+    };
+};
+
+// export const setTransplants = (count) => ({
+//     type: SET_TRANSPLANTS,
+//     payload: {
+//         count
+//     }
+// });

@@ -2,16 +2,16 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styles from './FiltersPanel.module.css'
 import FilterPanelItem from './FilterPanelItem';
+import {connect} from 'react-redux';
+import {transplantsSelectors} from '../../redux/selectors';
 
-const FiltersPanel = (props) => {
+const FiltersPanel = ({transplants}) => {
     return (
         <div className={styles.panel}>
             <div className={styles.head}>количество пересадок</div>
-            <FilterPanelItem name="Все"/>
-            <FilterPanelItem name="Без пересадок"/>
-            <FilterPanelItem name="1 пересадка"/>
-            <FilterPanelItem name="2 пересадки"/>
-            <FilterPanelItem name="3 пересадки"/>
+            {transplants.map(item => (
+                <FilterPanelItem name={item.name} count={item.count} key={item.count}/>
+            ))}
         </div>
     );
 };
@@ -20,4 +20,6 @@ const FiltersPanel = (props) => {
 //
 // };
 
-export default FiltersPanel;
+export default connect((state) => ({
+    transplants: transplantsSelectors(state)
+}))(FiltersPanel);

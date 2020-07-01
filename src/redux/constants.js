@@ -5,3 +5,6 @@ export const SUCCESS = '_SUCCESS';
 export const FAILURE = '_FAILURE';
 
 export const SET_MAIN_FILTER = 'SET_MAIN_FILTER';
+export const SET_TRANSPLANTS = 'SET_TRANSPLANTS';
+export const DEL_TRANSPLANT = 'DEL_TRANSPLANT';
+export const DEL_OTHER_TRANSPLANTS = 'DEL_OTHER_TRANSPLANTS';
