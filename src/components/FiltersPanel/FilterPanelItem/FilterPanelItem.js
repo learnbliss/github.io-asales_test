@@ -6,8 +6,6 @@ import {selectTransplantsBoolSelector} from '../../../redux/selectors';
 import {setTransplants} from '../../../redux/actions';
 
 const FilterPanelItem = ({name, count, selectTransplants, setTransplants}) => {
-    console.log('selectTransplants: ', selectTransplants);
-    console.log('count: ', count);
     return (
         <label className={styles.label}>
             <input

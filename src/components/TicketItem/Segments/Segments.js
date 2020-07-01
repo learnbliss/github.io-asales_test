@@ -1,18 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Segment.module.css'
+import {connect} from 'react-redux';
+import {transplantsToMapSelectors} from '../../../redux/selectors';
 
-const Segments = ({segments}) => {
-
-    const numTransfers = (arr) => {
-        if (arr.length > 1) {
-            return `${arr.length} пересадки`
-        } else if (arr.length === 1) {
-            return `${arr.length} пересадка`
-        } else if (arr.length === 0) {
-            return 'Без пересадок'
-        }
-    };
+const Segments = ({segments, transplants}) => {
 
     const destinationTime = (date) => {
         return new Date(date).toLocaleTimeString().slice(0, -3);
@@ -32,7 +24,7 @@ const Segments = ({segments}) => {
             <div className={styles.root} key={duration}>
                 <div className={styles.first}>{origin} - {destination}</div>
                 <div className={styles.first}>В ПУТИ</div>
-                <div className={styles.first}>{numTransfers(stops)}</div>
+                <div className={styles.first}>{transplants[stops.length]}</div>
                 <div className={styles.second}>{destinationTime(date)} - {arrivalTime(date, duration)}</div>
                 <div className={styles.second}>{durationTime(duration)}</div>
                 <div className={styles.second}>{stops.join(', ')}</div>
@@ -51,4 +43,6 @@ Segments.propTypes = {
     }).isRequired).isRequired
 };
 
-export default Segments;
+export default connect((state) => ({
+    transplants: transplantsToMapSelectors(state)
+}))(Segments);
