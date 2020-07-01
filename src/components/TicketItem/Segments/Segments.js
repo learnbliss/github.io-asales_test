@@ -3,13 +3,27 @@ import PropTypes from 'prop-types';
 import styles from './Segment.module.css'
 
 const Segments = ({segments}) => {
-    console.log('segments: ', segments);
 
     const numTransfers = (arr) => {
         if (arr.length > 1) {
             return `${arr.length} пересадки`
+        } else if (arr.length === 1) {
+            return `${arr.length} пересадка`
+        } else if (arr.length === 0) {
+            return 'Без пересадок'
         }
-        return `${arr.length} пересадка`
+    };
+
+    const destinationTime = (date) => {
+        return new Date(date).toLocaleTimeString().slice(0, -3);
+    };
+
+    const durationTime = (min) => {
+        return `${Math.floor(min / 60)}ч ${min % 60}м`;
+    };
+
+    const arrivalTime = (date, min) => {
+        return new Date(Date.parse(date) + (min * 60000)).toLocaleTimeString().slice(0, -3);
     };
 
     return segments.map(segment => {
@@ -19,23 +33,22 @@ const Segments = ({segments}) => {
                 <div className={styles.first}>{origin} - {destination}</div>
                 <div className={styles.first}>В ПУТИ</div>
                 <div className={styles.first}>{numTransfers(stops)}</div>
-                <div className={styles.second}>10:45 - 08:00</div>
-                <div className={styles.second}>21ч 15м</div>
+                <div className={styles.second}>{destinationTime(date)} - {arrivalTime(date, duration)}</div>
+                <div className={styles.second}>{durationTime(duration)}</div>
                 <div className={styles.second}>{stops.join(', ')}</div>
             </div>
         )
     })
 };
 
-Segments.propTypes = {};
+Segments.propTypes = {
+    segments: PropTypes.arrayOf(PropTypes.shape({
+        origin: PropTypes.string.isRequired,
+        destination: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        stops: PropTypes.arrayOf(PropTypes.string),
+        duration: PropTypes.number.isRequired,
+    }).isRequired).isRequired
+};
 
 export default Segments;
-
-// <div className={styles.root}>
-//                     <div className={styles.first}>MOW - HKT</div>
-//                     <div className={styles.first}>В ПУТИ</div>
-//                     <div className={styles.first}>2 ПЕРЕСАДКИ</div>
-//                     <div className={styles.second}>10:45 - 08:00</div>
-//                     <div className={styles.second}>21ч 15м</div>
-//                     <div className={styles.second}>HKG, JNB</div>
-//                 </div>
