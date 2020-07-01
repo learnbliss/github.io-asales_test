@@ -15,6 +15,16 @@ const TicketItem = ({tickets}) => {
     );
 };
 
-TicketItem.propTypes = {};
+TicketItem.propTypes = {
+    tickets: PropTypes.shape({
+        carrier: PropTypes.string,
+        price: PropTypes.number,
+        segments: PropTypes.array.isRequired,
+    })
+};
+
+TicketItem.defaultProps = {
+  price: 0,
+};
 
 export default TicketItem;

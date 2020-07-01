@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import styles from './FiltersPanel.module.css'
 import FilterPanelItem from './FilterPanelItem';
 
@@ -16,8 +16,8 @@ const FiltersPanel = (props) => {
     );
 };
 
-FiltersPanel.propTypes = {
-
-};
+// FiltersPanel.propTypes = {
+//
+// };
 
 export default FiltersPanel;

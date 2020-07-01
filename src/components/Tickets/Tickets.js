@@ -20,7 +20,7 @@ const Tickets = ({loadTickets, tickets,}) => {
                 <div className={styles.ticket}>
                     {tickets ? tickets.map(item => (
                         <TicketItem tickets={item} key={item.price}/>
-                    )): <div>Loading...</div>}
+                    )) : <div>Loading...</div>}
                 </div>
             </div>
         </div>
@@ -28,7 +28,8 @@ const Tickets = ({loadTickets, tickets,}) => {
 };
 
 Tickets.propTypes = {
-
+    loadTickets: PropTypes.func.isRequired,
+    tickets: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default connect((state) => ({

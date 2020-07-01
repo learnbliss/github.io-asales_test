@@ -12,6 +12,8 @@ const FilterPanelItem = ({name}) => {
     );
 };
 
-FilterPanelItem.propTypes = {};
+FilterPanelItem.propTypes = {
+    name: PropTypes.string.isRequired
+};
 
 export default FilterPanelItem;

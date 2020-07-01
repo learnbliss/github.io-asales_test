@@ -6,7 +6,7 @@ import cn from 'classnames';
 const Button = ({name, action, selected, borderRadius}) => {
     return (
         <button
-            className={cn(styles.button, { [styles.selected]: selected })}
+            className={cn(styles.button, {[styles.selected]: selected})}
             style={borderRadius}
             onClick={action}
         >{name}</button>
@@ -14,7 +14,10 @@ const Button = ({name, action, selected, borderRadius}) => {
 };
 
 Button.propTypes = {
-
+    name: PropTypes.string,
+    action: PropTypes.func,
+    selected: PropTypes.bool,
+    borderRadius: PropTypes.objectOf(PropTypes.string),
 };
 
 export default Button;

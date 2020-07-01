@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import styles from './MainButtons.module.css'
 import Button from './Button';
 
@@ -22,8 +22,8 @@ const MainButtons = (props) => {
     );
 };
 
-MainButtons.propTypes = {
-
-};
+// MainButtons.propTypes = {
+//
+// };
 
 export default MainButtons;
