@@ -2,21 +2,24 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styles from './MainButtons.module.css'
 import Button from './Button';
+import {connect} from 'react-redux';
+import {setMainFilter} from '../../redux/actions';
+import {mainFilterSelector} from '../../redux/selectors';
 
-const MainButtons = (props) => {
+const MainButtons = ({setMainFilter, filter}) => {
     return (
         <div className={styles.mainButtons}>
             <Button
                 name="самый дешевый"
-                action={() => console.log('click дешевый')}
+                action={() => setMainFilter('cheapest')}
                 borderRadius={{borderRadius: '.5rem 0 0 .5rem'}}
-                selected={true}
+                selected={filter === 'cheapest'}
             />
             <Button
                 name="самый быстрый"
-                action={() => console.log('click быстрый')}
+                action={() => setMainFilter('fastest')}
                 borderRadius={{borderRadius: '0 .5rem .5rem 0'}}
-                selected={false}
+                selected={filter === 'fastest'}
             />
         </div>
     );
@@ -26,4 +29,8 @@ const MainButtons = (props) => {
 //
 // };
 
-export default MainButtons;
+export default connect((state) => ({
+    filter: mainFilterSelector(state)
+}), {
+    setMainFilter
+})(MainButtons);

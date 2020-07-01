@@ -1,4 +1,4 @@
-import {FAILURE, LOAD_TICKETS, REQUEST, SUCCESS} from './constants';
+import {FAILURE, LOAD_TICKETS, REQUEST, SET_MAIN_FILTER, SUCCESS} from './constants';
 
 export const loadTickets = () => {
     return async (dispatch, getState) => {
@@ -16,3 +16,10 @@ export const loadTickets = () => {
         }
     };
 };
+
+export const setMainFilter = (filter) => ({
+    type: SET_MAIN_FILTER,
+    payload: {
+        filter
+    },
+});

@@ -1,14 +1,15 @@
-import {LOAD_TICKETS, REQUEST, SUCCESS, FAILURE} from '../constants'
+import {LOAD_TICKETS, REQUEST, SUCCESS, FAILURE, SET_MAIN_FILTER} from '../constants'
 
 const initialState = {
   entities: {},
   loading: false,
   loaded: false,
   error: null,
+  mainFilter: 'cheapest' // 'fastest'
 };
 
 export default (state = initialState, action) => {
-  const { type, response, error } = action;
+  const { type, payload, response, error } = action;
 
   switch (type) {
     case LOAD_TICKETS + REQUEST:
@@ -30,6 +31,11 @@ export default (state = initialState, action) => {
         loading: false,
         loaded: false,
         error,
+      };
+    case SET_MAIN_FILTER:
+      return {
+        ...state,
+        mainFilter: payload.filter
       };
     default:
       return state;

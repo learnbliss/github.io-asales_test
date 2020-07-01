@@ -11,7 +11,7 @@ import {ticketsSelector} from '../../redux/selectors';
 const Tickets = ({loadTickets, tickets,}) => {
     useEffect(() => {
         loadTickets();
-    }, []);
+    }, []); //eslint-disable-line
     return (
         <div className={styles.root}>
             <FiltersPanel/>

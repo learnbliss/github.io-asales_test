@@ -4,7 +4,6 @@ import styles from './TicketItem.module.css'
 import Segments from './Segments';
 
 const TicketItem = ({tickets}) => {
-    console.log('tickets.carrier: ', tickets.carrier);
     return (
         <div className={styles.root}>
             <div className={styles.head}>
@@ -22,10 +21,6 @@ TicketItem.propTypes = {
         price: PropTypes.number,
         segments: PropTypes.array.isRequired,
     })
-};
-
-TicketItem.defaultProps = {
-  price: 0,
 };
 
 export default TicketItem;
