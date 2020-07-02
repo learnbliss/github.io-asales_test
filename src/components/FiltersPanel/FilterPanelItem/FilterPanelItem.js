@@ -20,7 +20,10 @@ const FilterPanelItem = ({name, count, selectTransplants, setTransplants}) => {
 };
 
 FilterPanelItem.propTypes = {
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+    count: PropTypes.number.isRequired,
+    selectTransplants: PropTypes.bool,
+    setTransplants: PropTypes.func.isRequired,
 };
 
 export default connect((state, props) => ({

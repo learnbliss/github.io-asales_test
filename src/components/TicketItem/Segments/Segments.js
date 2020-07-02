@@ -40,7 +40,8 @@ Segments.propTypes = {
         date: PropTypes.string.isRequired,
         stops: PropTypes.arrayOf(PropTypes.string),
         duration: PropTypes.number.isRequired,
-    }).isRequired).isRequired
+    }).isRequired).isRequired,
+    transplants: PropTypes.objectOf(PropTypes.string)
 };
 
 export default connect((state) => ({

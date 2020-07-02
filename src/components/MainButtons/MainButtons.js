@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './MainButtons.module.css'
 import Button from './Button';
 import {connect} from 'react-redux';
@@ -25,9 +25,10 @@ const MainButtons = ({setMainFilter, filter}) => {
     );
 };
 
-// MainButtons.propTypes = {
-//
-// };
+MainButtons.propTypes = {
+    setMainFilter: PropTypes.func.isRequired,
+    filter: PropTypes.string.isRequired
+};
 
 export default connect((state) => ({
     filter: mainFilterSelector(state)
