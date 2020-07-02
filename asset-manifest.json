@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/github.io-asales_test/static/css/main.63c24268.chunk.css",
+    "main.js": "/github.io-asales_test/static/js/main.f9407a02.chunk.js",
+    "main.js.map": "/github.io-asales_test/static/js/main.f9407a02.chunk.js.map",
+    "runtime-main.js": "/github.io-asales_test/static/js/runtime-main.8933f76b.js",
+    "runtime-main.js.map": "/github.io-asales_test/static/js/runtime-main.8933f76b.js.map",
+    "static/css/2.764ccc25.chunk.css": "/github.io-asales_test/static/css/2.764ccc25.chunk.css",
+    "static/js/2.40487858.chunk.js": "/github.io-asales_test/static/js/2.40487858.chunk.js",
+    "static/js/2.40487858.chunk.js.map": "/github.io-asales_test/static/js/2.40487858.chunk.js.map",
+    "index.html": "/github.io-asales_test/index.html",
+    "precache-manifest.17819ba2968d96775ce6f173f986a632.js": "/github.io-asales_test/precache-manifest.17819ba2968d96775ce6f173f986a632.js",
+    "service-worker.js": "/github.io-asales_test/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/github.io-asales_test/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.63c24268.chunk.css.map": "/github.io-asales_test/static/css/main.63c24268.chunk.css.map",
+    "static/js/2.40487858.chunk.js.LICENSE.txt": "/github.io-asales_test/static/js/2.40487858.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8933f76b.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.40487858.chunk.js",
+    "static/css/main.63c24268.chunk.css",
+    "static/js/main.f9407a02.chunk.js"
+  ]
+}
