@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/github.io-asales_test/index.html/static/css/main.63c24268.chunk.css",
+    "main.css": "/github.io-asales_test/index.html/static/css/main.48485baf.chunk.css",
     "main.js": "/github.io-asales_test/index.html/static/js/main.8daafc40.chunk.js",
     "main.js.map": "/github.io-asales_test/index.html/static/js/main.8daafc40.chunk.js.map",
     "runtime-main.js": "/github.io-asales_test/index.html/static/js/runtime-main.b9e44285.js",
@@ -9,17 +9,17 @@
     "static/js/2.40487858.chunk.js": "/github.io-asales_test/index.html/static/js/2.40487858.chunk.js",
     "static/js/2.40487858.chunk.js.map": "/github.io-asales_test/index.html/static/js/2.40487858.chunk.js.map",
     "index.html": "/github.io-asales_test/index.html/index.html",
-    "precache-manifest.9083ad2f16bc46d6637d4fe5398d3ba0.js": "/github.io-asales_test/index.html/precache-manifest.9083ad2f16bc46d6637d4fe5398d3ba0.js",
+    "precache-manifest.e18a7c6d70ae35741a4209f7f345e093.js": "/github.io-asales_test/index.html/precache-manifest.e18a7c6d70ae35741a4209f7f345e093.js",
     "service-worker.js": "/github.io-asales_test/index.html/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/github.io-asales_test/index.html/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.63c24268.chunk.css.map": "/github.io-asales_test/index.html/static/css/main.63c24268.chunk.css.map",
+    "static/css/main.48485baf.chunk.css.map": "/github.io-asales_test/index.html/static/css/main.48485baf.chunk.css.map",
     "static/js/2.40487858.chunk.js.LICENSE.txt": "/github.io-asales_test/index.html/static/js/2.40487858.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b9e44285.js",
     "static/css/2.764ccc25.chunk.css",
     "static/js/2.40487858.chunk.js",
-    "static/css/main.63c24268.chunk.css",
+    "static/css/main.48485baf.chunk.css",
     "static/js/main.8daafc40.chunk.js"
   ]
 }
