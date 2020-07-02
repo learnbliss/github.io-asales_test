@@ -1,7 +1,6 @@
 .panel {
     align-self: start;
     background-color: var(--white);
-    width: min-content;
     border-radius: .5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
@@ -11,4 +10,25 @@
     text-transform: uppercase;
     white-space: nowrap;
     padding: .7rem 1.5rem 1rem 1.5rem;
+}
+
+
+@media all and (max-width: 830px) {
+    .panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: .5rem 0;
+    }
+}
+
+@media all and (max-width: 670px) {
+    .panel {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .panel {
+        grid-template-columns: 1fr;
+    }
 }

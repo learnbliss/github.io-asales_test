@@ -1,7 +1,7 @@
 .root {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-column-gap: 1.5rem;
+    grid-gap: 1.5rem;
 }
 
 .board {
@@ -15,4 +15,19 @@
     grid-template-rows: min-content;
     align-self: start;
     grid-gap: 1.5rem;
+}
+
+@media all and (max-width: 830px) {
+    .root {
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+    }
+
+    .board {
+        grid-gap: .5rem;
+    }
+
+    .ticket {
+        grid-gap: .5rem;
+    }
 }

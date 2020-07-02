@@ -11,3 +11,9 @@
     width: 60px;
     height: 60px;
 }
+
+@media all and (max-width: 830px){
+    .logo {
+        margin: 0 .5rem .5rem .5rem;
+    }
+}

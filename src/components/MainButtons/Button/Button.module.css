@@ -14,3 +14,9 @@
     background-color: var(--blue);
     border: 0;
 }
+
+@media all and (max-width: 830px){
+    .button {
+        padding: 1rem;
+    }
+}

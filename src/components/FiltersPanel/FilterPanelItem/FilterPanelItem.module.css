@@ -5,6 +5,7 @@
     user-select: none;
     padding: .7rem 1.5rem;
     font-weight: normal;
+    white-space: nowrap;
 }
 
 .label:hover {
@@ -47,10 +48,16 @@
 /*}*/
 
 .label .customInput:after {
-  width: .5rem;
-  height: 1rem;
-  margin: 0 .5rem 0;
-  border: solid var(--blue);
-  border-width: 0 2px 2px 0;
-  transform: rotate( 45deg);
+    width: .5rem;
+    height: 1rem;
+    margin: 0 .5rem 0;
+    border: solid var(--blue);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+@media all and (max-width: 500px) {
+    .label {
+        padding: .5rem;
+    }
 }

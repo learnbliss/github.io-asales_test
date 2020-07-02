@@ -22,3 +22,18 @@
     color: var(--blue);
     font-size: 2rem;
 }
+
+@media all and (max-width: 830px) {
+    .root {
+        padding: 1rem;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .root {
+        padding: .5rem;
+    }
+    .head {
+        grid-gap: .7rem;
+    }
+}

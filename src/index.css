@@ -20,9 +20,16 @@ body {
   background-color: #F3F7FA;
   color: var(--black);
   font-weight: 600;
+  padding: .5rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media all and (max-width: 500px) {
+    body {
+      font-size: 15px;
+    }
 }
