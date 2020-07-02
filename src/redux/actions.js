@@ -39,12 +39,16 @@ export const setTransplants = (count) => {
         const state = getState();
         const transplants = selectTransplantsSelector(state);
         if (transplants.includes(count)) {
-            dispatch({type: DEL_TRANSPLANT, payload: {count}})
-        }
-        else if (count === Infinity) {
+            dispatch({type: DEL_TRANSPLANT, payload: {count}});
+            if (transplants.length === 1) {
+                dispatch({type: DEL_OTHER_TRANSPLANTS});
+            }
+        } else if (count === Infinity) {
             dispatch({type: DEL_OTHER_TRANSPLANTS})
-        }
-        else {
+        } else {
+            if (transplants.length === 3) {
+                return dispatch({type: DEL_OTHER_TRANSPLANTS});
+            }
             dispatch({type: SET_TRANSPLANTS, payload: {count}})
         }
     };

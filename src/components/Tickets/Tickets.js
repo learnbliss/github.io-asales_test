@@ -6,12 +6,13 @@ import MainButtons from '../MainButtons';
 import TicketItem from '../TicketItem';
 import {connect} from 'react-redux';
 import {loadTickets} from '../../redux/actions';
-import {ticketsSelector} from '../../redux/selectors';
+import {ticketsSelector, ticketsWithStopsSelector} from '../../redux/selectors';
 
 const Tickets = ({loadTickets, tickets,}) => {
     useEffect(() => {
         loadTickets();
     }, []); //eslint-disable-line
+    console.log('tickets: ', tickets);
     return (
         <div className={styles.root}>
             <FiltersPanel/>
@@ -33,5 +34,6 @@ Tickets.propTypes = {
 };
 
 export default connect((state) => ({
-    tickets: ticketsSelector(state),
+    tickets: ticketsWithStopsSelector(state),
+    // tickets: ticketsSelector(state),
 }), {loadTickets})(Tickets);
